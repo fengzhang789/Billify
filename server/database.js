@@ -22,9 +22,9 @@ db.once('open', () => {
 
 const Schema = mongoose.Schema;
 
-const arterySchema = new Schema({
+const medicalSchema = new Schema({
   number: String,
-  code: String,
+  specialty: String,
   title: String,
   anes: String,
   asset: String,
@@ -32,5 +32,5 @@ const arterySchema = new Schema({
 });
 
 // Define and export the model after the connection is established
-const artery = mongoose.model('artery', arterySchema);
-module.exports = { artery };
+const medical = mongoose.model('medical', medicalSchema);
+module.exports = { medical };
