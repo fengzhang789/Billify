@@ -20,16 +20,43 @@ def sob_into_df(url, speciality):
             # Extract data from each row
             code = row.find('td', {'data-prop': 'code'}).text.strip()
             title = row.find('td', {'data-prop': 'title'}).text.strip()
+
+            # Try to extract 'anes', if not, try 'tech'
             try:
                 anes = row.find('td', {'data-prop': 'anes'}).text.strip()
             except AttributeError:
-                anes = None
+                try:
+                    anes = row.find('td', {'data-prop': 'tech'}).text.strip()
+                except AttributeError:
+                    anes = None
 
+            # Try to extract 'asst', if not, try 'prof'
             try:
                 asst = row.find('td', {'data-prop': 'asst'}).text.strip()
             except AttributeError:
-                asst = None
-            fee = row.find('td', {'data-prop': 'fee'}).text.strip()
+                try:
+                    asst = row.find('td', {'data-prop': 'prof'}).text.strip()
+                except AttributeError:
+                    asst = None
+            
+            try:
+                fee = row.find('td', {'data-prop': 'fee'}).text.strip()
+            except AttributeError:
+                fee = None
+
+            if not fees:
+                if anes and asst:
+                    try:
+                        fee = str(float(anes) + float(asst))
+                    except ValueError:
+                        fee = None
+                elif asst:
+                    fee = asst
+                elif anes:
+                    fee = anes
+                else:
+                    fee = None
+               
 
             # Append data to lists
             codes.append(code)
@@ -37,17 +64,19 @@ def sob_into_df(url, speciality):
             anes_list.append(anes)
             asst_list.append(asst)
             fees.append(fee)
+
         specialties = [speciality] * len(rows)
+        
         # Create a Pandas DataFrame
         df = pd.DataFrame({
-            'Speciality':  specialties,
+            'Speciality': specialties,
             'Code': codes,
             'Title': titles,
             'Anes': anes_list,
             'Asst': asst_list,
             'Fee': fees
         })
-
+        print(df)
         return df
     else:
         print(f"Failed to retrieve the page. Status code: {response.status_code}")  
@@ -69,5 +98,5 @@ for link in links:
     sob_all = pd.concat([sob_all, df], ignore_index=True)
     print(specialty + " is done")
 
-sob_all.to_csv('ALL_SOB_DATA.csv')
+sob_all.to_csv('ALL_SOB_DATA_NEW.csv')
 print("data exported. program done.")
