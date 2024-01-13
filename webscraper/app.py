@@ -46,4 +46,5 @@ def sob_into_df(url):
 
 url = 'https://www.dr-bill.ca/ohip_billing_codes/specialty/cardiovascular-surgical-procedures/arteries'  # Replace with the actual URL of the page you want to scrape
 
-sob_into_df(url)
+arteries = sob_into_df(url)
+arteries.to_csv('arteries.csv')
