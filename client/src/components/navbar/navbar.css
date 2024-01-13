@@ -19,7 +19,7 @@
 
 .billify__navbar-links_logo img {
     width: 62px;
-    height: 16px; 
+    height: 52px; 
 }
 
 .billify__navbar-links_container{
@@ -39,7 +39,7 @@
 .billif__navbar-menu_container p {
     color: white;
     font-family: var(--font-family);
-    font-weight: 500; 
+    font-weight: 400; 
     font-size: 18px;
     line-height: 25px; 
     text-transform: capitalize;
@@ -52,9 +52,9 @@
 .billify__navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #e24b29;
+    background: rgb(65, 94, 242);
     font-family: var(--font-family);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 25px;
     border: none;
