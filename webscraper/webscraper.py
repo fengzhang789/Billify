@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import csv
+import os
+
+print("Current Working Directory:", os.getcwd())
 
 def sob_into_df(url):
     response = requests.get(url)
@@ -44,7 +48,13 @@ def sob_into_df(url):
     else:
         print(f"Failed to retrieve the page. Status code: {response.status_code}")  
 
-url = 'https://www.dr-bill.ca/ohip_billing_codes/specialty/cardiovascular-surgical-procedures/arteries'  # Replace with the actual URL of the page you want to scrape
+csv_file_path = '/webscraper/output.csv'
+links = []
 
-arteries = sob_into_df(url)
-arteries.to_csv('arteries.csv')
+with open(csv_file_path, 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        if row:  # Check if the row is not empty
+            links.append(row[0]) 
+
+print(links)
