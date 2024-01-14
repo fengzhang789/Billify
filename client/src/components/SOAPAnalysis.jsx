@@ -8,9 +8,9 @@ const SOAPAnalysis = ({text}) => {
       <div className="soap-notes">
           <p>"Summary"</p>
       </div>
-      <Dropbox heading = 'Billing' text = 'THIS WORKS'></Dropbox>
-      <Dropbox heading = 'Drugs' text = 'THIS WORKS'></Dropbox>
-      <Dropbox heading = 'Lab Data/Test Results' text = 'THIS WORKS'></Dropbox>
+      <Dropbox className= "billing" heading = 'Billing' text = '$$$$$'></Dropbox>
+      <Dropbox heading = 'Drugs' text = 'Looks better'></Dropbox>
+      <Dropbox heading = 'Lab Data/Test Results' text = '...'></Dropbox>
     </>
   )
 }

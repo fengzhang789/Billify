@@ -9,7 +9,7 @@ const Dropbox = ({ heading, text }) => {
     };
   
     return (
-        <div className={`dropbox-${isExpanded ? 'expanded' : ''}`}>
+        <div className={`dropbox ${isExpanded ? 'expanded' : ''}`}>
             <button onClick={toggleExpansion}>{heading}</button>
             <div className="content">
                 {isExpanded ? text : ''}

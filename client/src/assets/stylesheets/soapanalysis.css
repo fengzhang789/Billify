@@ -1,13 +1,13 @@
 .soap-notes {
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     margin-top: 10px;
     word-wrap: break-word;
     text-align: left; 
     border-radius: 15px; /* Add border-radius for bubbly edges */
     height: 500px; 
-    width: 60%; 
+    width: 70%; 
     margin-left: auto; 
     margin-right: auto;
     font-family: var(--font-family);
@@ -16,30 +16,37 @@
 }
 
 .dropbox {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px auto;
-  max-width: 300px; 
-  text-align: center;
+  background-color: #ffffff;
+  border: 0px solid #ccc;
+  padding: 00px;
+  margin: 50px auto;
+  width: 70%;
+  text-align: left;
   transition: height 0.3s ease-in-out;
 }
 
 .dropbox button {
-  background-color: purple;
+  background-color: rgb(71, 53, 99);
   color: #fff;
   border: none;
   padding: 10px;
-  border-radius: 4px;
   cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 300; 
+  width: 100%; /* Make the button take the full width of its container */
 }
 
 .dropbox .content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
 }
 
 .dropbox.expanded .content {
-  max-height: 200px; /* Adjust the maximum height as needed */
+  padding: 15px;
+  max-height: 800px;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 200; 
 }
