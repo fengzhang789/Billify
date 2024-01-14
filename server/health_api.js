@@ -5,7 +5,7 @@ const envFilePath = path.resolve(__dirname, '..', '.env');
 dotenv.config({ path: envFilePath });
 const LOCATION = "northamerica-northeast1"
 
-const cred = `ya29.a0AfB_byDs14_AuyyUHNFGc_jQnG_iBsv_qSQr5o4-TQk-i-KSZUDxsEo3-fOuXFpHQu8DEW-SN6HFz4PG10AZFRAOBdTNYdpCW4ilmX5oXhGBhXXYBoRPZ6Mzk4bIUa1Tt0HpFqiLWKZtPp8NoUZBrOH_aZHuiGCQkXuy5iqJLeIaCgYKAcISARASFQHGX2MidJ2he07SpstcHRIq65cYJg0178`
+const cred = `ya29.a0AfB_byDI2WSEHwmZNLHf-pnHyiAa8TNk64HNhoDqRJuFl-0CoPL4laPKM0IaUK8A_CbEIXtfKQk3ErBA7QaMlYhmy4IcDceKvWruIgVLRjtjJWY3_ToetiqXAG6_2QY-EmY9yo5TvHLN12Or_tOfKPS_3dytVJ69r3uK0zD1LlgaCgYKAcQSARASFQHGX2MiXKxA0DpmpkIq8CdvITF2IA0178`
 const uri = `https://healthcare.googleapis.com/v1/projects/key-prism-411223/locations/northamerica-northeast1/services/nlp:analyzeEntities`
 
 
@@ -33,7 +33,7 @@ const fetchGoogleAPI = async (message) => {
         .catch(err => console.log(err))
     
     entityMentions = await entityMentions.filter(item => {
-        return (item.type === "MEDICAL_DEVICE" || item.type === "MEDICINE" || item.type === "PROCEDURE");
+        return (item.type === "MEDICAL_DEVICE" || item.type === "MEDICINE" || item.type === "PROCEDURE" || item.type === "ANATOMICAL_STRUCTURE");
     })
 
     return entityMentions;

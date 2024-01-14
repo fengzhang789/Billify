@@ -23,14 +23,18 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api', async (req, res) => {
-  const inputString = req.body.data;
-  const data = await fetchGoogleAPI(inputString)
-  console.log(data[0].text.content)
-  var dbData = await findInDB("title",  data[0].text.content, null);
+  try {
+    const inputString = req.body.data;
+    const data = await fetchGoogleAPI(inputString)
+    console.log(data[0].text.content)
+    var dbData = await findInDB("title",  data[0].text.content, null);
 
-  var returnData = [data, dbData]
-  console.log(returnData)
-  res.json(returnData);
+    var returnData = [data, dbData]
+    console.log(returnData)
+    res.json(returnData);
+  } catch (e) {
+    console.log(e)
+  }
 })
 
 app.listen(port, () => {
