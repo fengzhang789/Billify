@@ -34,19 +34,35 @@
     align-items: center;
 }
 
-.billify__navbar-links_container p,
-.billify__navbar-sign p,
-.billif__navbar-menu_container p {
+/* Target the list items within .billify__navbar-links_container */
+.billify__navbar-links_container ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Make the list items a flex container */
+    justify-content: space-between; /* Evenly space the items */
+    align-items: center; /* Vertically align items */
+    padding: 0; /* Remove default padding */
+    
+  }
+  
+  /* Target the links within the list items */
+  .billify__navbar-links_container a {
     color: white;
     font-family: var(--font-family);
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 18px;
-    line-height: 25px; 
+    line-height: 25px;
     text-transform: capitalize;
-
-    margin: 0 1rem;
-    cursor: pointer; 
-}
+    margin: 0 2rem; /* Add spacing between links */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+  }
+  
+  /* Optional: Add hover styles for links */
+  .billify__navbar-links_container a:hover {
+    color: lightblue; /* Change the link color to light blue on hover */
+  text-decoration: none; /* Remove underline on hover */
+  }
+  
 
 .billify__navbar-sign button, 
 .billify__navbar-menu_container button {
@@ -60,7 +76,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: px;
 }
 
 .billify__navbar-menu{

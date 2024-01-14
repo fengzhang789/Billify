@@ -1,16 +1,38 @@
+import './navbar.css';
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'; 
 import logo from '../../assets/logo.png';
-import './navbar.css';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+import {Route, Routes} from 'react-router';
+import  {Header} from '../../containers';
+import {Features} from '../../containers';
 
 
 
 const Menu = () => (
-  <>
+  /*<>
     <p><Link to="/home">Home</Link></p>
     <p><Link to="/features">Note Intake</Link></p>
+<<<<<<< HEAD
   </>
+=======
+
+  </> */
+  <div className="billify__navbar-links_container">
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/features">Note Intake</Link>
+      </li>
+
+    </ul>
+
+
+
+</div>
+>>>>>>> c1183e37106fde2070b69ad231be3efc67ae3816
 );
 
 
@@ -24,8 +46,22 @@ const Navbar = () => {
           <img src={logo} />
         </div>
         <div className="billify__navbar-links_container">
-          <p><Link to="/home">Home</Link></p>
-          <p><Link to="/features">Note Intake</Link></p>
+          
+
+
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/features">Note Intake</Link>
+            </li>
+
+          </ul>
+
+
+
+
 
         </div>
       </div>
