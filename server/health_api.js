@@ -5,7 +5,7 @@ const envFilePath = path.resolve(__dirname, '..', '.env');
 dotenv.config({ path: envFilePath });
 const LOCATION = "northamerica-northeast1"
 
-const cred = `ya29.a0AfB_byBcxi791TxTl7SBdT36CEGwKhvgHNfhbVmR3Byyj5DgrOJtZPyJ3uqXkPLK6kTWixwjvsUl1YksZZSJU6rTXrz_r4_4zrc5PTG4ZI6uE8_h9XdxrFhwW_ECaipmS2lEojobBjv1cvcRLtTXD4gzGMRc6D76eVT-FqbVQWMaCgYKAZsSARASFQHGX2Mi0JwCKHAE69XBSQdXvGVuOg0178`
+const cred = `ya29.a0AfB_byB9JP8He8D2ACl3I-uXHimaK6GrYGfjhkydWuBOALotO-oZFtxpwXZqG4NRHhMI3cbjhNOe_EtOQj5OoOpiKulOIUc7f6VZkl0h3771G8-_9u12Yo-ABItXJqveTUjkCQu0v-HtPHB2S_cmpDHqy8sGfm8CV71d6EOlgGQaCgYKAXwSARASFQHGX2MinqERh21qwjBe0hbVZlpFEA0178`
 const uri = `https://healthcare.googleapis.com/v1/projects/key-prism-411223/locations/northamerica-northeast1/services/nlp:analyzeEntities`
 
 
@@ -37,14 +37,7 @@ const fetchGoogleAPI = async (message) => {
         return (item.type === "MEDICAL_DEVICE" || item.type === "MEDICINE" || item.type === "PROCEDURE");
     })
 
-    for (var item of entityMentions) {
-        var definition = await getMedicalDefinition(item.text.content);
-        console.log(definition)
-        finalReturn.push({...item, definition: definition});
-    }
-
-    console.log(finalReturn);
-    return finalReturn
+    return entityMentions;
 }
 
 

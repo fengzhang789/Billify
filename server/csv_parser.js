@@ -38,15 +38,8 @@ const findInDB = async (fieldName, searchString, returnFields) => {
         queryObj[fieldName] = { $regex: new RegExp(searchString, 'i') };
     }
 
-    var returnData;
-    await medical.find(queryObj, returnFields)
-        .then(data => returnData = data);
-
+    const returnData = await medical.find(queryObj, returnFields).limit(5)
     return returnData;
 }
-
-// findInDB("title", "request", null )
-//     .then(data => console.log(data))
-
 
 module.exports = findInDB

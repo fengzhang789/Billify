@@ -7,6 +7,7 @@ var cors = require('cors');
 require('dotenv').config({path: '../.env'});
 const fetchGoogleAPI = require('./health_api')
 const port = 5000
+const findInDB = require('./csv_parser')
 
 var app = express();
 
@@ -23,7 +24,12 @@ app.get('/', (req, res) => {
 
 app.post('/api', async (req, res) => {
   const inputString = req.body.data;
-  var returnData = await fetchGoogleAPI(inputString)
+  const data = await fetchGoogleAPI(inputString)
+  console.log(data[0].text.content)
+  var dbData = await findInDB("title",  data[0].text.content, null);
+
+  var returnData = [data, dbData]
+  console.log(returnData)
   res.json(returnData);
 })
 

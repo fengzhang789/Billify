@@ -1,6 +1,7 @@
 import React from 'react';
 import Tooltip from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
+import { useState } from 'react';
 import "../assets/stylesheets/highlightedwords.css";
 
 const StyledTooltipContent = styled('div')({
@@ -13,7 +14,7 @@ const StyledTooltipContent = styled('div')({
     maxWidth: '300px', // Customize according to your needs
   });
   
-  const MyComponent = () => {
+  const HoverTooltipTest = () => {
     const [isTooltipVisible, setTooltipVisible] = useState(false);
   
     const handleMouseEnter = () => {
@@ -44,6 +45,6 @@ const StyledTooltipContent = styled('div')({
     );
   };
   
-  export default MyComponent;
+  export default HoverTooltipTest;
   
   
