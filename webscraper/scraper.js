@@ -6,8 +6,7 @@ axios.get('https://www.dr-bill.ca/ohip_billing_codes')
     .then(({ data }) => {
         const $ = cheerio.load(data);
 
-        const billingLinks = $("a").map((index, value) => { 
-            const $text = $(value);
+        const billingLinks = $("a").map((index, value) => {
             const $link = $(value).attr("href");
             return {'link': $link};
         }) 

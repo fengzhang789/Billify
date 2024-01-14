@@ -23,40 +23,36 @@ def sob_into_df(url, speciality):
 
             # Try to extract 'anes', if not, try 'tech'
             try:
-                anes = row.find('td', {'data-prop': 'anes'}).text.strip()
+                anes = row.find('td', {'data-prop': 'anes'}).text.strip().replace('$', '')
             except AttributeError:
                 try:
-                    anes = row.find('td', {'data-prop': 'tech'}).text.strip()
+                    anes = row.find('td', {'data-prop': 'tech'}).text.strip().replace('$', '')
                 except AttributeError:
                     anes = None
 
             # Try to extract 'asst', if not, try 'prof'
             try:
-                asst = row.find('td', {'data-prop': 'asst'}).text.strip()
+                asst = row.find('td', {'data-prop': 'asst'}).text.strip().replace('$', '')
             except AttributeError:
                 try:
-                    asst = row.find('td', {'data-prop': 'prof'}).text.strip()
+                    asst = row.find('td', {'data-prop': 'prof'}).text.strip().replace('$', '')
                 except AttributeError:
                     asst = None
-            
+
             try:
-                fee = row.find('td', {'data-prop': 'fee'}).text.strip()
-            except AttributeError:
+                fee = row.find('td', {'data-prop': 'fee'}).text.strip().replace('$', '')
+            except AttributeError or TypeError or ValueError:
                 fee = None
 
-            if not fees:
+            if fee == None or fee == 0 or fee == '':
                 if anes and asst:
-                    try:
-                        fee = str(float(anes) + float(asst))
-                    except ValueError:
-                        fee = None
+                    fee = str(float(anes) + float(asst))
                 elif asst:
                     fee = asst
                 elif anes:
                     fee = anes
                 else:
                     fee = None
-               
 
             # Append data to lists
             codes.append(code)
@@ -76,7 +72,6 @@ def sob_into_df(url, speciality):
             'Asst': asst_list,
             'Fee': fees
         })
-        print(df)
         return df
     else:
         print(f"Failed to retrieve the page. Status code: {response.status_code}")  

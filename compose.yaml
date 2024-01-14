@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: ./server
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5000:5000
+  client:
+    build:
+      context: ./client
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
