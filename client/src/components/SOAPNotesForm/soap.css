@@ -1,13 +1,55 @@
+/* SOAP Form Container Styles */
+.soap-notes-form-container {
+    display: flex;
+    flex-direction: column;
+    color: white; /* Set text color to white */
+    font-family: var(--font-family);
+    font-size: 23px;
+    font-weight: 300; 
+  }
 
-  /* form */
+  /* Input Field Styles */
   .soap-input {
+
+    background-color: white;
+    border: 1px solid #DDD;
+    color: darkblue; /* Set text color in input */
+    border-radius: 5px; /* Rounded corners for input field */
+    font-family: var(--font-family);
+    font-size: 23px; /* Set font size to 23px */
+  }
+  
+  .form-group input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 80px;
+    margin-bottom: 30px;
     background-color: white;
     border: 1px solid #DDD;
     color: darkblue;
+}
+
+  /* Submit Button Styles */
+  .submit-button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    background: var(--gradient-text);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
   }
   
-
+  /* Hover Effect for Submit Button */
+  .submit-button:hover {
+    background-image: linear-gradient(darkblue, lightblue);
+  }
   
