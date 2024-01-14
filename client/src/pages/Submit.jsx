@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import HoverTooltipTest from '../components/HoverTooltipTest';
-=======
-import React, { useState, useEffect} from 'react'
-import '../assets/stylesheets/feature.css';
-import Navbar from '../components/Navbar';
-import SOAPAnalysis from '../components/SOAPAnalysis';
->>>>>>> 2b3367add31472fc73f120ce639b09c1894efc1b
+
 
 const Submit = () => {
-    const [data, setData] = useState('');
+    const [keywords, setKeywords] = useState(null)
+    const [billings, setBillings] = useState(null)
 
     const fetchData = async () => {
         try {
@@ -26,8 +21,8 @@ const Submit = () => {
           intracranial pressure. He has no complaints of headache, changes in vision, or nausea/vomiting.
           Finally, although his drug usage probably contributed to these recent symptoms through
           mechanisms of cerebral ischemia via vasoconstriction, the presentation would be very atypical
-          for acute intoxication or withdrawal.
-           `;
+          for acute intoxication or withdrawal.`;
+
           const response = await fetch(`http://localhost:5000/api`, {
             method: 'POST',
             headers: {
@@ -38,8 +33,8 @@ const Submit = () => {
       
           const result = await response.json();
           
-          var keywords = result[0];
-          var bills = result[1];
+          setKeywords(result[0]);
+          setBillings(result[1]);
 
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -51,7 +46,16 @@ const Submit = () => {
       }, [])
     
     return (
-        <HoverTooltipTest />
+        <>
+            <HoverTooltipTest />
+            {keywords && keywords.map(item => {
+                return <h1 style={{color: 'white'}} key={item.mentionId}>{item.text.content}</h1>
+            })}
+
+            {billings && billings.map(item => {
+                return <h1 style={{color: 'white'}} key={item.title}>{item.title} {item.fee}</h1>
+            })}
+        </>
     )
 }
 
