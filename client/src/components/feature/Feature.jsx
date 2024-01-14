@@ -1,30 +1,75 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './feature.css';
 import Navbar from '../navbar/Navbar';
 import { Header } from '../../containers';
 import SOAPNotesForm from '../SOAPNotesForm/SOAPNotesForm';
-
+import SOAPAnalysis from '../SOAPAnalysis';
+import '../SOAPNotesForm/soap.css';
+import { Formik, Form, Field } from 'formik';
 
 
 const Feature = () => {
+  const [soapNotes, setSoapNotes] = useState('')
+  const [showForm, setShowForm] = useState(true)
+
+  const handleFormSubmit = (values) => {
+    const newSoapNotes =
+      values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan;
+    setSoapNotes(newSoapNotes);
+    setShowForm(false);
+  };
+
   return (
     <div>
       <div>
-         <Navbar/>
-        
+        <Navbar />
         <div className="billify__feature-content">
           <h1 className="gradient__text">Input SOAP Notes</h1>
-          <SOAPNotesForm />
-          </div>
-       
+          {showForm ? (
+          <div className="soap-notes-form-container">
+          <Formik
+            initialValues={{
+              subjective: '',
+              objective: '',
+              assessment: '',
+              plan: '',
+            }}
+            onSubmit={handleFormSubmit}
+          >
+            <Form className="soap-notes-form">
+              <div className="form-group">
+                <p>Input your subjective notes</p>
+                <Field type="text" name="subjective" className="soap-input" />
+              </div>
+
+              <div className="form-group">
+                <p>Input your objective notes</p>
+                <Field type="text" name="objective" className="soap-input" />
+              </div>
+
+              <div className="form-group">
+                <p>Input your assessment notes</p>
+                <Field type="text" name="assessment" className="soap-input" />
+              </div>
+
+              <div className="form-group">
+                <p>Input your plan notes</p>
+                <Field type="text" name="plan" className="soap-input" />
+              </div>
+
+              <button type="submit" className="submit-button">Submit for Bill</button>
+            </Form>
+          </Formik>
+        </div>) : (
+        <SOAPAnalysis text = {soapNotes}/>
+        )}
+        </div>
       </div>
-       
-
-    <Bubbles /> {/* Insert Bubbles component here */}
-
+      <Bubbles /> {/* Insert Bubbles component here */}
     </div>
-  )
-}
+  );
+};
+
 const Bubbles = () => {
   const getRandomSize = () => {
     // Sizes range from 20px to 300px
