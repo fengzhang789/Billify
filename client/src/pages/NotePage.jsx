@@ -5,9 +5,7 @@ import SOAPAnalysis from '../components/SOAPAnalysis';
 import SOAPForm from '../components/Form';
 
 
-const Feature = () => {
-  const [soapNotes, setSoapNotes] = useState('')
-
+const Feature = ({soapNotes, setSoapNotes}) => {
   return (
     <div>
       <div>

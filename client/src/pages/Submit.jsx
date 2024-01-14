@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import HoverTooltipTest from '../components/HoverTooltipTest';
-=======
-import React, { useState, useEffect} from 'react'
-import '../assets/stylesheets/feature.css';
-import Navbar from '../components/Navbar';
-import SOAPAnalysis from '../components/SOAPAnalysis';
->>>>>>> 2b3367add31472fc73f120ce639b09c1894efc1b
 
 const Submit = () => {
     const [data, setData] = useState('');
