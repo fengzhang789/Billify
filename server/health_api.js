@@ -12,7 +12,7 @@ var requestBody = {
 requestBody = JSON.stringify(requestBody)
 
 // const cred = process.env.GOOGLE_CLOUD_HEALTHCARE_API.private_key
-const cred = `ya29.a0AfB_byDuQQQjfo7KwEV5fUSx4LWuhEwdhmuEbEmnKeam3_Bhe5tuflgQ0Bks-bfdgfolKRhcjoKUAtssAtUVVkX0ycSvs2B6Lt-gyRqi3UoGskYpIuIh7fBdGiQW7KmsbEOaV1IvFRAYZOc1wYS1zCK6S5gidDOWyo-w7VG0EQaCgYKAXsSARASFQHGX2MixxE2ZRYqbeC0yEDAGacgeg0177`
+const cred = `ya29.a0AfB_byAQUf5pcPk3M7puNS2TplQgcxOo4DDJM1BYRbyE2ivoLCcgSuCl7l43TNompMYGoX3oOPvf2xODDvDO55UM9LNibqKhGbgAxPnrBZFROSh_IBy2dDEOfVwfywtNAU9HRdlXuKFPC6bsGA7rTQn7gfuJWvlg7OR-8tSrBQaCgYKAV8SARASFQHGX2MiUblThBl0BpAdUu_J-1u6aA0177`
 const uri = `https://healthcare.googleapis.com/v1/projects/key-prism-411223/locations/northamerica-northeast1/services/nlp:analyzeEntities`
 const data = process.env.GOOGLE_CLOUD_HEALTHCARE_API;
 
@@ -27,8 +27,13 @@ fetch(uri, {
     headers: header,
     body: requestBody,
 }).then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+        var entityMentions = data.entityMentions;
+        entityMentions = entityMentions.filter(item => {
+            return (item.type === "MEDICAL_DEVICE" || item.type === "MEDICINE" || item.type === "PROCEDURE" || item.type === "PROBLEM");
+        })
+        entityMentions = { }
+    })
     .catch(err => console.log(err))
 
 
-    

@@ -55,6 +55,21 @@ app.get('/oauth2callback', (req, res) => {
 });
 
 
+function refreshAccessToken() {
+  oAuth2Client.refreshAccessToken()
+    .then(res => {
+      // Save the new credentials to the token file
+      fs.writeFile(TOKEN_PATH, JSON.stringify(res.credentials), (err) => {
+        if (err) return console.error(err);
+        console.log('Token refreshed and saved to', TOKEN_PATH);
+      });
+    })
+    .catch(err => {
+      console.error('Error refreshing access token:', err.message);
+    });
+}
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
