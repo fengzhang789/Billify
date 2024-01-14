@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import HoverTooltipTest from '../components/HoverTooltipTest';
 
-
 const Submit = () => {
     const [keywords, setKeywords] = useState(null)
     const [billings, setBillings] = useState(null)
