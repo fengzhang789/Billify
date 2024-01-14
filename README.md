@@ -1,3 +1,5 @@
+# Billify
+
 ### Building and running the application
 
 When you're ready, start the application by running (you must have docker installed for this option):
