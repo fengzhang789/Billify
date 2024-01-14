@@ -13,7 +13,8 @@ const Feature = () => {
       <div>
         <div className="billify__feature-content">
         <h1 className="gradient__text">Input SOAP Notes</h1>
-        <SOAPForm/>
+        <SOAPForm soapNotes = {soapNotes} setSoapNotes = {setSoapNotes}/>
+        console.log.print(soapNotes);
         </div>
       </div>
       <Bubbles /> {/* Insert Bubbles component here */}

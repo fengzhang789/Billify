@@ -6,7 +6,7 @@ const SOAPAnalysis = ({text}) => {
   return (
     <>
       <div className="soap-notes">
-          <p>"Summary"</p>
+          <p>{text}</p>
       </div>
       <Dropbox className= "billing" heading = 'Billing' text = '$$$$$'></Dropbox>
       <Dropbox heading = 'Drugs' text = 'Looks better'></Dropbox>

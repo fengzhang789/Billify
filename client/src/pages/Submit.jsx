@@ -46,7 +46,7 @@ const Submit = () => {
             <div className="billify__feature-content">
             <h1 className="gradient__text">Results</h1>
             <div style={{color: 'white'}}>{data}</div>
-            <SOAPAnalysis />
+            <SOAPAnalysis text = {data}/>
             </div>
         </div>
     )

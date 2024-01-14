@@ -4,8 +4,7 @@ import { Formik, Form, Field } from 'formik';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const SOAPNotesForm = () => {
-  const [soapNotes, setSoapNotes] = useState('')
+const SOAPNotesForm = ({soapNotes, setSoapNotes}) => {
   const navigate = useNavigate();
 
   return (
@@ -18,7 +17,7 @@ const SOAPNotesForm = () => {
           plan: '',
         }}
         onSubmit={(values) => {
-          const newSoapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
+          var newSoapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
           setSoapNotes(newSoapNotes);
           console.log(soapNotes);
           navigate('/submit');
