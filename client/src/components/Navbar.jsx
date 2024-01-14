@@ -1,20 +1,11 @@
-import './navbar.css';
+import '../assets/stylesheets/navbar.css';
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'; 
-import logo from '../../assets/logo.png';
-import { BrowserRouter, Link } from 'react-router-dom';
-import {Route, Routes} from 'react-router';
-import  {Header} from '../../containers';
-import {Features} from '../../containers';
-
+import logo from '../assets/img/logo.png';
+import { Link } from 'react-router-dom';
 
 
 const Menu = () => (
-  /*<>
-    <p><Link to="/home">Home</Link></p>
-    <p><Link to="/features">Note Intake</Link></p>
-
-  </> */
   <div className="billify__navbar-links_container">
     <ul>
       <li>
@@ -25,9 +16,6 @@ const Menu = () => (
       </li>
 
     </ul>
-
-
-
 </div>
 );
 
@@ -42,9 +30,6 @@ const Navbar = () => {
           <img src={logo} />
         </div>
         <div className="billify__navbar-links_container">
-          
-
-
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -54,11 +39,6 @@ const Navbar = () => {
             </li>
 
           </ul>
-
-
-
-
-
         </div>
       </div>
       <div className="billify__navbar-sign">

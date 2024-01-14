@@ -1,9 +1,7 @@
-import React, {useState} from 'react'
-import './feature.css';
-import Navbar from '../navbar/Navbar';
-import { Header } from '../../containers';
-import SOAPNotesForm from '../SOAPNotesForm/SOAPNotesForm';
-import SOAPAnalysis from '../SOAPAnalysis';
+import React, { useState } from 'react'
+import '../assets/stylesheets/features.css';
+import Navbar from './Navbar';
+import SOAPAnalysis from './SOAPAnalysis';
 import '../SOAPNotesForm/soap.css';
 import { Formik, Form, Field } from 'formik';
 

@@ -1,21 +1,24 @@
 import React from 'react'
-import {Header} from './containers';
-import {Navbar, Feature} from './components';
+import InputPage from './pages/InputPage';
+import {Feature} from './components';
 import './App.css'
 /* import { Link } from "react-router-dom"; */
 /* import {Route, Routes} from 'react-router'; */
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
     <div classname ="App">
-      <div className = "gradient__bg">
-        <Navbar/>
-        <Header/>
-      </div>
+        <BrowserRouter>
+          <Routes>
+          <Route exact path='/' element={<Homepage />} />
+          <Route path="/input" element={<InputPage/>} />
+          <Route path="/features" element={<Feature/>} />
+      </Routes>
+      </BrowserRouter>
+      
      
-   
-
         
     </div>
   )

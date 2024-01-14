@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import './soapanalysis.css';
+import React, {useState} from 'react';
+import '../assets/stylesheets/soapanalysis.css'
 
 const SOAPAnalysis = ({text}) => {
   return (

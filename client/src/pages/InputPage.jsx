@@ -1,6 +1,6 @@
 import React from 'react';
-import bill from '../../assets/bill.png';
-import './header.css';
+import bill from '../assets/img/bill.png';
+import '../assets/stylesheets/inputpage.css';
 
 
 
@@ -25,7 +25,7 @@ const Bubbles = () => {
     );
   };
 
-const Header = () => (
+const InputPage = () => (
   <div className="billify__header section__padding" id="home">
     <div className="billify__header-content">
       <h1 className="gradient__text">Revolutionize Doctor's Workflow by Automating Codes</h1>
@@ -47,4 +47,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default InputPage;
