@@ -1,3 +1,5 @@
+# Billify
+
 ### Building and running the application
 
 When you're ready, start the application by running (you must have docker installed for this option):
@@ -15,7 +17,7 @@ Billify aims to reduce the administrative workload of workers in the healthcare 
 
 ## 🏥 What Billify does ⚒️
 
-Billify analyzes electronic or hand-written medical history records of patients, and annotates the data with crucial information on patient history, key medications, procedures, and illnesses/ailments using Natural Language Processing. Billify then serves as a database, providing short references on complex terminology but most importantly, providing recommended billing codes on prescribed courses of treatment/diagnostics, based on keyword analysis. 
+Billify analyzes electronic or hand-written medical history records of patients, and annotates the data with crucial information on patient history, key medications, procedures, and illnesses/ailments using Natural Language Processing. Billify then serves as a database, highlighting complex terminology but most importantly, providing recommended billing codes on prescribed courses of treatment/diagnostics, based on keyword analysis. 
 
 Billify targets three main factors that can impact doctor's workflows: 
 
