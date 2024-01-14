@@ -19,22 +19,22 @@ const SOAPNotesForm = () => {
       >
         <Form className="soap-notes-form">
           <div className="form-group">
-            <p>Input your Subjective notes</p>
+            <p>Input your subjective notes</p>
             <Field type="text" name="subjective" className="soap-input" />
           </div>
 
           <div className="form-group">
-            <p>Input your Objective notes</p>
+            <p>Input your objective notes</p>
             <Field type="text" name="objective" className="soap-input" />
           </div>
 
           <div className="form-group">
-            <p>Input your Assessment notes</p>
+            <p>Input your assessment notes</p>
             <Field type="text" name="assessment" className="soap-input" />
           </div>
 
           <div className="form-group">
-            <p>Input your Plan notes</p>
+            <p>Input your plan notes</p>
             <Field type="text" name="plan" className="soap-input" />
           </div>
 
