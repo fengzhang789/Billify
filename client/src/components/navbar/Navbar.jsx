@@ -13,6 +13,9 @@ const Menu = () => (
   /*<>
     <p><Link to="/home">Home</Link></p>
     <p><Link to="/features">Note Intake</Link></p>
+<<<<<<< HEAD
+  </>
+=======
 
   </> */
   <div className="billify__navbar-links_container">
@@ -29,6 +32,7 @@ const Menu = () => (
 
 
 </div>
+>>>>>>> c1183e37106fde2070b69ad231be3efc67ae3816
 );
 
 
