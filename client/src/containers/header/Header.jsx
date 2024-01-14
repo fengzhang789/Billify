@@ -1,6 +1,6 @@
 import React from 'react';
 import bill from '../../assets/bill.png';
-import './header.css';
+import './Header.css';
 
 
 

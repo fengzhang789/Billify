@@ -25,9 +25,9 @@ const CONFIG = {
 // Creates a client
 const client = new vision.ImageAnnotatorClient(CONFIG);
 
-const fileName = '../handwriting.png';
+const fileNameEx = '../handwriting.png';
 
-async function readWords() {
+async function readWords(fileName) {
     // Performs text detection on the local file
     try {
         const [result] = await client.textDetection(fileName);
@@ -39,4 +39,6 @@ async function readWords() {
     }
 }
 
-readWords();
+module.exports = readWords;
+
+//readWords(fileNameEx);
