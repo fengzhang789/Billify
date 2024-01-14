@@ -10,7 +10,6 @@ const Menu = () => (
   <>
     <p><Link to="/home">Home</Link></p>
     <p><Link to="/features">Note Intake</Link></p>
-
   </>
 );
 
