@@ -76,7 +76,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: px;
+    border-radius: 5px;
 }
 
 .billify__navbar-menu{

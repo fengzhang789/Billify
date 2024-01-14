@@ -8,7 +8,7 @@ import { Header } from '../../containers';
 const Feature = () => {
   return (
     <div>
-      <div className="gradient__bg">
+      <div>
          <Navbar/>
         <div className="billify__feature section__padding" id="home">
         <div className="billify__feature-content">
