@@ -11,5 +11,7 @@
   },
   "scripts": {
     "start": "node app.js"
-  }
+  },
+
+  "proxy": "http://localhost:3000"
 }
