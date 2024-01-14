@@ -27,4 +27,26 @@ const results = [];
 // });
 
 
-// medical.find({ title: "Mandatory Special Necessities Benefit Request Fgorm" }, )
+// looking, do not include, limit.
+
+
+// findInDB finds all the items in the MONGODB database that has fieldname including searchString
+const findInDB = async (fieldName, searchString, returnFields) => {
+    var queryObj = new Object();
+    // Add a regex condition to the queryObj if searchString is provided
+    if (searchString) {
+        queryObj[fieldName] = { $regex: new RegExp(searchString, 'i') };
+    }
+
+    var returnData;
+    await medical.find(queryObj, returnFields)
+        .then(data => returnData = data);
+
+    return returnData;
+}
+
+// findInDB("title", "request", null )
+//     .then(data => console.log(data))
+
+
+module.exports = findInDB
