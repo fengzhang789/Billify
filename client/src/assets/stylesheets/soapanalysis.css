@@ -1,4 +1,4 @@
-.soap-notes-analysis-container {
+.soap-notes {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -13,5 +13,33 @@
     font-family: var(--font-family);
     font-size: 20px;
     font-weight: 300; 
-  }
-  
+}
+
+.dropbox {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 300px; 
+  text-align: center;
+  transition: height 0.3s ease-in-out;
+}
+
+.dropbox button {
+  background-color: purple;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropbox .content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.dropbox.expanded .content {
+  max-height: 200px; /* Adjust the maximum height as needed */
+}

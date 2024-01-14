@@ -16,8 +16,8 @@ const SOAPNotesForm = () => {
           plan: '',
         }}
         onSubmit={(values) => {
-          const soapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
-
+          const newSoapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
+          soapNotes = newSoapNotes;
           console.log(soapNotes);
         }}
       >
