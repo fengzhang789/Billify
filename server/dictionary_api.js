@@ -3,29 +3,23 @@ async function getMedicalDefinition(word) {
     const baseUrl = "https://www.dictionaryapi.com/api/v3/references/medical/json/";
     const url = `${baseUrl}${word}?key=${apiKey}`;
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP Error: ${response.statusText}`);
-        }
+    var res = await fetch(url)
+    res = await res.json()
 
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error(`Error: ${error.message}`);
+    if (res.length === 1) {
+        return keyInfo(res);
     }
+    return getMedicalDefinition(res[0])
 }
 
 // Replace 'your-api-key' with your actual Merriam-Webster API key
-const word = 'tenofovir';
+const word = 'cancer is bad';
 
-getMedicalDefinition(word)
-    .then(result => keyInfo(result))
-    .catch(error => console.error(error));
+getMedicalDefinition(word).then(res => console.log(res))
 
 function keyInfo(result) {
-    const shortDef = result[0]?.shortdef[0];
-    console.log(shortDef);
+    const shortDef = result[0].shortdef[0];
+    return shortDef;
 }
 
 module.exports = getMedicalDefinition;
