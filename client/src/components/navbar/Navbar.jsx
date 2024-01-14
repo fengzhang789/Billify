@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'; 
 import logo from '../../assets/logo.png';
 import './navbar.css';
-
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,8 +25,8 @@ const Navbar = () => {
           <img src={logo} />
         </div>
         <div className="billify__navbar-links_container">
-          <p><a href="#home">Home</a></p>
-          <p><a href="#features">Note Intake</a></p>
+          <p><Link to="/home">Home</Link></p>
+          <p><Link to="/features">Note Intake</Link></p>
 
         </div>
       </div>
