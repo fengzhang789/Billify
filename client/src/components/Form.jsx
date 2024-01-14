@@ -17,9 +17,13 @@ const SOAPNotesForm = ({soapNotes, setSoapNotes}) => {
           plan: '',
         }}
         onSubmit={(values) => {
-          var newSoapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
+          var newSoapNotes = {
+            subjective: values.subjective,
+            objective: values.objective,
+            assessment: values.assessment,
+            plan: values.plan,
+          }
           setSoapNotes(newSoapNotes);
-          console.log(soapNotes);
           navigate('/submit');
         }}
       >

@@ -7,15 +7,20 @@ import Navbar from './components/Navbar';
 import Submit from './pages/Submit';
 
 const App = () => {
-  const [soapNotes, setSoapNotes] = useState('')
+  const [soapNotes, setSoapNotes] = useState({
+    subjective: '',
+    objective: '',
+    assessment: '',
+    plan: '',
+  })
 
   return (
     <div classname ="App">
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Homepage />} />
-        <Route path="/note-input" element={<NotePage soapNotes = {soapNotes} setSoapNotes = {setSoapNotes} />} />
-        <Route path="/submit" element={<Submit text = {soapNotes}/>} />
+        <Route path="/note-input" element={<NotePage soapNotes={soapNotes} setSoapNotes={setSoapNotes} />} />
+        <Route path="/submit" element={<Submit text={soapNotes}/>} />
       </Routes>
     </div>
   )

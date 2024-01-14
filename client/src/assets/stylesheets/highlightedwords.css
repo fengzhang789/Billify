@@ -15,6 +15,10 @@ body {
     height: 100vh;
 }
 
+.highlight {
+    color:red;
+}
+
 p.submissionresults{
     color: #fff; /* Set text color to white */
     font-size: 3rem;
