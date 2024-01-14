@@ -3,13 +3,15 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.png';
 import './navbar.css';
 
+import { Link } from "react-router-dom";
+
+
+
 const Menu = () => (
   <>
-    <p><a href="#home">Home</a></p>
-    <p><a href="#wgpt3">What is GPT3?</a></p>
-    <p><a href="#possibility">Open AI</a></p>
-    <p><a href="#features">Case Studies</a></p>
-    <p><a href="#blog">Library</a></p>
+    <p><Link to="/home">Home</Link></p>
+    <p><Link to="/features">Note Intake</Link></p>
+
   </>
 );
 
@@ -25,15 +27,13 @@ const Navbar = () => {
         </div>
         <div className="billify__navbar-links_container">
           <p><a href="#home">Home</a></p>
-          <p><a href="#wgpt3">What is GPT3?</a></p>
-          <p><a href="#possibility">Open AI</a></p>
-          <p><a href="#features">Case Studies</a></p>
-          <p><a href="#blog">Library</a></p>
+          <p><a href="#features">Note Intake</a></p>
+
         </div>
       </div>
       <div className="billify__navbar-sign">
-        <p>Sign in</p>
-        <button type="button">Sign up</button>
+      
+        <button type="button">Get Started</button>
       </div>
       <div className="billify__navbar-menu">
         {toggleMenu
