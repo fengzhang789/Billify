@@ -12,7 +12,7 @@ const Menu = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/features">Note Intake</Link>
+        <Link to="/note-input">Note Intake</Link>
       </li>
 
     </ul>
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/features">Note Intake</Link>
+              <Link to="/note-input">Note Intake</Link>
             </li>
 
           </ul>

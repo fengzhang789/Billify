@@ -1,12 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import InputPage from './InputPage'
+import Hero from '../components/Hero'
 
 const Homepage = () => {
     return (
         <div className = "gradient__bg">
-            <Navbar />
-            <InputPage />
+            <Hero />
       </div>
     )
 }

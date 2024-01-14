@@ -1,4 +1,4 @@
-import './soap.css';
+import '../assets/stylesheets/form.css';
 import React, {useState} from 'react';
 import { Formik, Form, Field } from 'formik';
 
@@ -17,8 +17,6 @@ const SOAPNotesForm = () => {
         }}
         onSubmit={(values) => {
           const soapNotes = values.subjective + '\n' + values.objective + '\n' + values.assessment + '\n' + values.plan
-          //how do i send this somewhere else 
-
 
           console.log(soapNotes);
         }}

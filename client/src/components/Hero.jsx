@@ -1,6 +1,6 @@
 import React from 'react';
 import bill from '../assets/img/bill.png';
-import '../assets/stylesheets/inputpage.css';
+import '../assets/stylesheets/hero.css';
 
 
 

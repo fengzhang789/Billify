@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../assets/stylesheets/feature.css';
-import Navbar from './Navbar';
-import SOAPAnalysis from './SOAPAnalysis';
+import Navbar from '../components/Navbar';
+import SOAPAnalysis from '../components/SOAPAnalysis';
 import '../assets/stylesheets/soapanalysis.css';
 import { Formik, Form, Field } from 'formik';
 
@@ -20,7 +20,6 @@ const Feature = () => {
   return (
     <div>
       <div>
-        <Navbar />
         <div className="billify__feature-content">
           <h1 className="gradient__text">Input SOAP Notes</h1>
           {showForm ? (
