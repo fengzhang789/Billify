@@ -1,50 +1,55 @@
 /* SOAP Form Container Styles */
 .soap-notes-form-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 20px;
     color: white; /* Set text color to white */
-    font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
     font-family: var(--font-family);
-    font-size: 25px;
+    font-size: 23px;
+    font-weight: 300; 
   }
-  
-  /* Form Group Styles */
-  .form-group {
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add margin to bottom */
-  }
-  
+
   /* Input Field Styles */
   .soap-input {
-    width: calc(100% - 30px); /* Subtract margin from width */
-    padding: 15px; /* Increase padding for bigger field */
-    margin: 0 15px; /* Add margin to sides */
+
     background-color: white;
     border: 1px solid #DDD;
     color: darkblue; /* Set text color in input */
     border-radius: 5px; /* Rounded corners for input field */
     font-family: var(--font-family);
+    font-size: 23px; /* Set font size to 23px */
   }
   
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 80px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid #DDD;
+    color: darkblue;
+}
+
   /* Submit Button Styles */
   .submit-button {
-    background-image: linear-gradient(lightblue, darkblue);
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 15px; /* Rounded corners for button */
+    min-height: 50px;
     font-family: var(--font-family);
-    font-size: 25px;
-
-}
-
-/* Hover Effect for Submit Button */
-.submit-button:hover {
-background-image: linear-gradient(darkblue, lightblue);
-}
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 28px;
+    background: var(--gradient-text);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+  }
+  
+  /* Hover Effect for Submit Button */
+  .submit-button:hover {
+    background-image: linear-gradient(darkblue, lightblue);
+  }
   

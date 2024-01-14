@@ -2,8 +2,7 @@ import React from 'react'
 import './feature.css';
 import Navbar from '../navbar/Navbar';
 import { Header } from '../../containers';
-import SOAPNotesForm from '../SOAPNotesForm/SOAPNotesForm'; 
-
+import SOAPNotesForm from '../SOAPNotesForm/SOAPNotesForm';
 
 
 
@@ -12,12 +11,12 @@ const Feature = () => {
     <div>
       <div>
          <Navbar/>
-        <div className="billify__feature section__padding" id="home">
+        
         <div className="billify__feature-content">
           <h1 className="gradient__text">Input SOAP Notes</h1>
           <SOAPNotesForm />
           </div>
-          </div>
+       
       </div>
        
 
