@@ -26,25 +26,25 @@ const SOAPNotesForm = ({soapNotes, setSoapNotes}) => {
         <Form className="soap-notes-form">
           <div className="form-group">
             <p>Input your subjective notes</p>
-            <Field type="text" name="subjective" className="soap-input" />
+            <Field component="textarea" name="subjective" className="soap-input" />
           </div>
 
           <div className="form-group">
             <p>Input your objective notes</p>
-            <Field type="text" name="objective" className="soap-input" />
+            <Field component="textarea" name="objective" className="soap-input" />
           </div>
 
           <div className="form-group">
             <p>Input your assessment notes</p>
-            <Field type="text" name="assessment" className="soap-input" />
+            <Field component="textarea" name="assessment" className="soap-input" />
           </div>
 
           <div className="form-group">
             <p>Input your plan notes</p>
-            <Field type="text" name="plan" className="soap-input" />
+            <Field component="textarea" name="plan" className="soap-input" />
           </div>
 
-          <button type="submit" className="submit-button">Submit for Bill</button>
+          <button type="submit" className="submit-button">Submit for Analysis</button>
         </Form>
       </Formik>
     </div>
