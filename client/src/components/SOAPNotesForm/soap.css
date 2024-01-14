@@ -9,25 +9,17 @@
   }
 
   /* Input Field Styles */
-  .soap-input {
+.soap-input {
 
-    background-color: white;
-    border: 1px solid #DDD;
-    color: darkblue; /* Set text color in input */
-    border-radius: 5px; /* Rounded corners for input field */
-    font-family: var(--font-family);
-    font-size: 23px; /* Set font size to 23px */
-  }
-  
-  .form-group input[type="text"] {
-    width: 100%;
-    padding: 80px;
     margin-bottom: 30px;
     background-color: white;
     border: 1px solid #DDD;
     color: darkblue;
-}
-
+    font-size: 20px; /* Set font size to 20px */
+    border-radius: 20px;
+  }
+  
+  
   /* Submit Button Styles */
   .submit-button {
     color: white;
