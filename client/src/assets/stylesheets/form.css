@@ -8,16 +8,22 @@
     font-weight: 300; 
   }
 
-  /* Input Field Styles */
+/* Textarea Styles */
 .soap-input {
-
-    margin-bottom: 30px;
-    background-color: white;
-    border: 1px solid #DDD;
-    color: darkblue;
-    font-size: 20px; /* Set font size to 20px */
-    border-radius: 20px;
-  }
+  margin-bottom: 30px;
+  background-color: white;
+  border: 1px solid #DDD;
+  color: darkblue;
+  font-size: 20px; /* Set font size to 20px */
+  border-radius: 20px;
+  padding: 10px; /* Add padding to textarea */
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Set a minimum height for textarea */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  white-space: pre-wrap; /* Wrap text and break lines */
+  word-wrap: break-word; /* Break words when necessary */
+  width: 100%; /* Ensure the textarea takes up the full width */
+}
   
   
   /* Submit Button Styles */
