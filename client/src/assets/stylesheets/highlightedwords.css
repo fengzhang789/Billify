@@ -15,78 +15,78 @@ body {
     height: 100vh;
 }
 
-p {
+p.submissionresults{
     color: #fff; /* Set text color to white */
     font-size: 3rem;
     cursor: pointer;
     position: relative;
-    text-decoration: underline; /* Remove color initially */
+/* Add green underline initially */
 }
 
-/* Green variation */
-p.green::after {
+p.underline_green{
+    text-decoration: underline #00ff00; 
+}
+
+p.underline_red{
+  text-decoration: underline #D22B2B;
+}
+
+p.underline_blue{
+  text-decoration: underline #0000FF;
+}
+
+p.underline_purple{
+  text-decoration: underline #BF40BF;
+}
+
+p.underline_green::after {
     content: '';
     position: absolute;
     height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: lightgreen;
+    background: #00ff00;
     opacity: 0;
     transition: opacity .2s;
 }
 
-p.green:hover::after {
-    opacity: 0.2;
-}
-
-/* Red variation */
-p.red::after {
+p.underline_purple::after {
     content: '';
     position: absolute;
     height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: lightcoral;
+    background: #BF40BF;
     opacity: 0;
     transition: opacity .2s;
 }
 
-p.red:hover::after {
-    opacity: 0.2;
-}
-
-/* Blue variation */
-p.blue::after {
+p.underline_red::after {
     content: '';
     position: absolute;
     height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: lightblue;
+    background: #D22B2B;
     opacity: 0;
     transition: opacity .2s;
 }
 
-p.blue:hover::after {
-    opacity: 0.2;
-}
-
-/* Purple variation */
-p.purple::after {
+p.underline_blue::after {
     content: '';
     position: absolute;
     height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: mediumpurple;
+    background: #0000FF;
     opacity: 0;
     transition: opacity .2s;
 }
 
-p.purple:hover::after {
+p.submissionresults:hover::after {
     opacity: 0.2;
 }
