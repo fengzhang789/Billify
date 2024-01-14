@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 
-async function getMedicalDefinition(word, apiKey) {
+async function getMedicalDefinition(word) {
+    const apiKey = '513c2f38-de23-4473-babc-46cbec2858d6';
     const baseUrl = "https://www.dictionaryapi.com/api/v3/references/medical/json/";
     const url = `${baseUrl}${word}?key=${apiKey}`;
 
@@ -18,7 +19,6 @@ async function getMedicalDefinition(word, apiKey) {
 }
 
 // Replace 'your-api-key' with your actual Merriam-Webster API key
-const apiKey = '513c2f38-de23-4473-babc-46cbec2858d6';
 const word = 'tenofovir';
 
 getMedicalDefinition(word, apiKey)
