@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'; 
 import logo from '../assets/img/logo.png';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 const Menu = () => (
   <div className="billify__navbar-links_container">
@@ -22,6 +22,12 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/note-input');
+};
 
   return (
     <div className="billify__navbar">
@@ -43,7 +49,7 @@ const Navbar = () => {
       </div>
       <div className="billify__navbar-sign">
       
-        <button type="button">Get Started</button>
+        <button type="button" onClick={handleButtonClick}>Get Started</button>
       </div>
       <div className="billify__navbar-menu">
         {toggleMenu

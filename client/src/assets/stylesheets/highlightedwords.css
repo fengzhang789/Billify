@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    color: #fff; /* Set text color to white */
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+    text-decoration: underline; /* Remove color initially */
+}
+
+/* Green variation */
+p.green::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: lightgreen;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+p.green:hover::after {
+    opacity: 0.2;
+}
+
+/* Red variation */
+p.red::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: lightcoral;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+p.red:hover::after {
+    opacity: 0.2;
+}
+
+/* Blue variation */
+p.blue::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: lightblue;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+p.blue:hover::after {
+    opacity: 0.2;
+}
+
+/* Purple variation */
+p.purple::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: mediumpurple;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+p.purple:hover::after {
+    opacity: 0.2;
+}
