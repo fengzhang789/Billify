@@ -111,6 +111,45 @@
     height: 100%;
 }
 
+/* Bubble Styles and Animations */
+
+.gradient-bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(65, 94, 242);
+    border-radius: 50%;
+    animation: float 5s linear infinite, scale 5s ease-in-out infinite;
+    opacity: 0.3; /* Adjust transparency */
+  }
+  
+  /* Individual bubble positioning */
+  .bubble-0 { top: 10%; left: 15%; }
+  .bubble-1 { top: 20%; left: 70%; }
+  .bubble-2 { top: 30%; left: 40%; }
+  .bubble-3 { top: 85%; left: 20%; }
+  .bubble-4 { top: 30%; left: 80%; }
+  .bubble-5 { top: 70%; left: 30%; }
+  .bubble-6 { top: 90%; left: 90%; }
+  .bubble-7 { top: 90%; left: 20%; }
+  .bubble-8 { top: 90%; left: 60%; }
+  .bubble-9 { top: 10%; left: 85%; }
+  
+  
+  /* Keyframes for animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes move-around {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(-30px, -30px); }
+    50% { transform: translate(30px, 30px); }
+    75% { transform: translate(-3px, 30px); }
+    100% { transform: translate(30px, -30px); }
+  }
+  /* end of bubbles */
 @media screen and (max-width: 1050px) {
     .billify__header {
         flex-direction: column;
@@ -164,34 +203,3 @@
         line-height: 16px;
     }
 }
-
-.gradient-bubble {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, rgb(65, 94, 242) 1.84%, #92caf8 102.67%);
-    border-radius: 50%;
-    animation: float 5s linear infinite, scale 5s ease-in-out infinite;
-  }
-  
-  @keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes scale {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-  }
-  
