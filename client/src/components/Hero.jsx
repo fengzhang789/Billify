@@ -1,6 +1,7 @@
 import React from 'react';
 import bill from '../assets/img/bill.png';
 import '../assets/stylesheets/hero.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,9 +33,7 @@ const InputPage = () => (
       <p>Billify streamlines medical billing by converting SOAP notes into billing records, providing doctors with efficient coding and bill generation capabilities.</p>
 
       <div className="billify__header-content__input">
-        
-        <button type="button">Get Started</button>
-
+        <Link to="/note-input"><button type="button">Get Started</button></Link>
       </div>
 
       <Bubbles /> {/* Insert Bubbles component here */}

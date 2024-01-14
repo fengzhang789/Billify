@@ -1,3 +1,32 @@
 span[class] {
-    font-size: 19px;
+    color:red;
+    font-family: var(--font-family);
+
+}
+
+.text-box, .keywords {
+    background-color: white;
+    margin: 2vh 5vw 5vh 5vw;
+    padding: 4vh 5vw;
+    font-size: 18px;
+    font-family: var(--font-family);
+
+}
+
+h2 {
+    margin-bottom: 1vh;
+    font-family: var(--font-family);
+
+}
+
+h5 {
+    color: black;
+    font-family: var(--font-family);
+    weight: 500;
+}
+
+.h5-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }

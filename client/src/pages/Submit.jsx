@@ -75,20 +75,27 @@ const Submit = ({ text }) => {
     
     return (
         <>
-            <div style={{ backgroundColor: 'white' }}>
+            <div style={{ backgroundColor: 'white' }} className='text-box'>
+                <h2>Summary</h2>
                 {inputDataArray &&
                     inputDataArray.map((item, index) => (
                     highlightedWords.indexOf(item) !== -1 ? (
-                        <span style={{color: 'red'}} key={index} className='highlighted'>{item} </span>
+                        <span style={{color: 'red'}} key={index} className='highlighted'>{item + " "}</span>
                     ) : (
-                        <span key={index}>{item} </span>
+                        <span key={index}>{item + " "} </span>
                     )
                     ))}
+            </div>
+            
+            <div className='keywords'>
+                <h2>Keywords</h2>
+                <div className='h5-container'>
+                    {keywords && keywords.map(item => {
+                        return <h4 key={item.mentionId}>{item.text.content}</h4>
+                    })}
                 </div>
-
-            {keywords && keywords.map(item => {
-                return <h1 style={{color: 'white'}} key={item.mentionId}>{item.text.content}</h1>
-            })}
+            </div>
+            
 
             {billings && billings.map(item => {
                 return <h1 style={{color: 'white'}} key={item.title}>{item.title} {item.fee}</h1>
