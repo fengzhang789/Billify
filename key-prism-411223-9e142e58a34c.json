@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "key-prism-411223",
+  "private_key_id": "9e142e58a34cea8db3fe06e79f1cfa5d6f941b83",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC2d8zFnqRQChU3\n/id4F648aodIaIRl4G2OZt0q4R+RmqGyQS08sAVXo2KP42X8ZSknXh5lmI0BQS1Z\nYqw/iVnSGEhv2rPK6mezayQxUzDuzu9e2neZXc8SUjx5VsFOBZZALTkVVVtferBf\n3WwCv0FD2OVs3c9zVAYg6Grpe1ZjcnjrZ/gPfYmIt6BESwofY8W/0+popxgWZlTL\nYKAJKPuVPOvv9QvG5EAxMVLbCeI33nI+3QfuhqvP/ihzL02Sg98peD/SG4njPpYw\nTXYSrSXBbAnpBz7HHGWDXfRxGrmeNEMIh8m3zYLwvL1fssOrvTSRLHdvT2/nybi8\nE1uHMz63AgMBAAECggEASIAhZQQ71XGsLKtXk2gVWvwY9LRSpwgdf89vYXJB0ODY\nDrPG/a4S8VeB+hook7i+OV40RbnvjOgQ1MtYFYbFoaz0Wz1S4vVwbuHLZ63ea4Td\np5q2msGjXWw/ixblh9LAeI9/dvKLc8yT+ANKv2yuyf6Mak1X+EMSjFDM6iiPksNl\nTOFLXhUlcMznrD/iVkP+VcSea3OjGkDmyvgNN9GUsBkdrAxDfT/z4aj7n499P72C\nchvAfRbQzMzzVaXl3GZxV3FSeunPJtqgISiMxvLuKx/yjc8rJ1jIdCbFBw8OfZhW\nsBfaD/DvPBENMjtKscMYLRfaw0UTtDsBhkcVdH3hAQKBgQDh3wbYvq9S59eBiIkD\nauaEw2UIIyFdOewzJVU5mbR/DHcCREbV6KbL+uIwwxJcvqgkQUhHek07nclq5X1L\n+Vf3ybkoFtSav31nO0xy6jMC4Gzbipe58XDCxN9HZqKdQD8G/TpaK15aW6Bmj241\nf1qyBSQpgJ7peq46PSORGVJhBwKBgQDOzqeCk2pfyBkOhUJQuzDXWBuiA+jXRiQU\nee8p4KRCofZNqRDrIy5Dg1Yo2h5nrGKP5spxZ319X5uwjQ3VN9dhEEkZ+IB7/fxq\nYL7Pkd5cyHohkj90ka3/Q7uJv8q3Lf55EijDtEeHJanQm31ywQ08eDZ47BiCFnMh\nXRyphOO40QKBgQDZC3eIz7Op9x8fWhRPNGpPKXPsXdWxv/c5Lqa2svy/GTtC8lkf\nNHETkgHI2arLdGoebJ0IEn4ky3rBPcUpPHFLqoxB+a5TBa97g3/y7RoXqZDxZjxm\ncZvpjUUBV57rfNET5kIsY4BHU8TOyQUeY0LDzizxtKb/tOO3EwkaZTrEAQKBgFqO\nQOk7VbP1MYubLGufXAafjRIHdjh1fSz+K4yB0ktfEjP1WPQtZn+njd27jN7GrC3o\n2DKKJ3fzmn/Xc/wuRIA7Gldl6hThJVsLW+IWNHEaU+hJWsHXXIJPDVqHAePuHuSy\n3+i6EywJgO9Ydrj98abN2MRgVWb5H5a3Z+qOxwxRAoGBAMVVvzTBQ49sHwbm9Q4g\nyHHzdOLeavw3Kg28nlFPVWfBwHTBUHqU0NHYw7MqVlm2gVxJrCRJFQBOi6CBirvd\ne0vhcd1IGVuPZFsU7R63Bz0g+1rIeuAmQDrYTV3uN7wAFcOMuivEsmUdkvxKCJgb\nqI1FTbAuFxUWrKeH6UQE9xct\n-----END PRIVATE KEY-----\n",
+  "client_email": "healthcare-api@key-prism-411223.iam.gserviceaccount.com",
+  "client_id": "109616325541880448938",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/healthcare-api%40key-prism-411223.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

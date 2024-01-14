@@ -1,11 +1,10 @@
-// const { artery } = require('./database.js')
 const { medical } = require('./database.js')
 const csv = require('csv-parser')
 const fs = require('fs')
 const results = [];
 
 // ONLY RUN THIS FILE ONCE!
-fs.createReadStream('../SOB Data/ALL_SOB_DATA.csv')
+fs.createReadStream('../SOB Data/ALL_SOB_DATA_NEW.csv')
     .pipe(csv())
     .on('data', (data) => results.push(data))
     .on('end', () => {
