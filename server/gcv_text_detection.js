@@ -40,5 +40,3 @@ async function readWords(fileName) {
 }
 
 module.exports = readWords;
-
-//readWords(fileNameEx);
